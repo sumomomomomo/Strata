@@ -2717,6 +2717,18 @@ int main(int argc, char** argv) {
                 std::fprintf(stderr, "%s wants fp32 or bf16 (got '%s')\n", a.c_str(), value.c_str());
                 return 2;
             }
+#if defined(STRATA_GPU_METAL)
+            // The Metal decode window (metal/src/engine/window.cpp) stores and restores the running state as fp32
+            // bytes only: it has no codec. A bf16 request here would set a checkpoint's codec tag, have the window
+            // write fp32 bytes under it, and let the next reader size-check those bytes against bf16 - so the Metal
+            // port refuses the option at startup rather than relabeling bytes or silently ignoring the request.
+            // (A full Metal codec is out of scope; the same refusal guards the shared save/restore hooks below.)
+            if (o.session_state_codec_id != strata::core::StateCodec::Fp32) {
+                std::fprintf(stderr, "--session-state-codec %s: this Metal build stores the running state as fp32 "
+                                     "only; the option is not supported here\n", value.c_str());
+                return 2;
+            }
+#endif
             o.session_state_codec = value;
         }
         else if (a == "--prompt-cache-every") o.prompt_cache_every = std::max(0LL, std::atoll(next("--prompt-cache-every")));

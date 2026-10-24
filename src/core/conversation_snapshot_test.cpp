@@ -232,6 +232,69 @@ void full_session(int fmt, int mode, int experts) {
               got_state.dead==want_state.dead && got_state.block_pos==want_state.block_pos,"the same running state");
         check(untouched.live.ids==a.live.ids && equal(untouched.kv[0],a.kv[0]) && equal(untouched.kv[1],a.kv[1]),
               "the parked image is unchanged");
+        // the same borrow with a CODED donor: --session-state-codec bf16 parks A's image and its chain in bf16, and
+        // a borrowing request copies that chain (each checkpoint keeps its own tag) before mounting the one at `at`.
+        // The serve path cannot run here, so this is the host half of it: the donor's bytes stay exactly as they
+        // were, the copied chain restores correctly through the codec-aware restore, and a re-capture of the
+        // borrowed prefix still matches the fp32 reference above.
+        {
+            check(conversation_snapshot_restore(a,ss,g,draft.state,err)==ConversationRestore::restored,
+                  "coded donor: start from the complete A image");
+            const ConversationView coded_borrow_view{ids,images,checkpoints,true,StateCodec::Bf16};
+            SavedConversation coded_donor;
+            check(conversation_snapshot_save(coded_donor,coded_borrow_view,ss,g,draft.state,err),
+                  "coded donor: park A with the state coded");
+            const SavedConversation kept=coded_donor;
+            // the engine's copy of the chain on the borrowed path (conversation_copy.hpp keeps each checkpoint's
+            // own tag), then the mount of the checkpoint at `at` - the same order the borrow takes
+            std::vector<ConversationCheckpoint> copied;
+            check(conversation_checkpoints_store(coded_donor.checkpoints,StateCodec::Bf16,copied,err) &&
+                  copied[0].state_codec==(uint8_t) StateCodec::Bf16 && copied[0].gdn==coded_donor.checkpoints[0].gdn,
+                  "coded donor: the borrowed chain is copied under its own codec, not coded twice");
+            fill(201);
+            check(conversation_snapshot_restore_prefix(coded_donor,at,ss,g,draft.state,err)==
+                      ConversationRestore::restored,"coded donor: restore its prefix");
+            check(conversation_checkpoint_restore(copied[0],ss,g,err),"coded donor: mount the coded checkpoint");
+            ConversationCheckpoint got_coded;
+            got_coded.ids=copied[0].ids;
+            check(conversation_checkpoint_save(got_coded,ss,g,err),"coded donor: capture the mounted prefix fp32");
+            auto decoded_equals=[&](const std::vector<uint8_t>& encoded,const std::vector<uint8_t>& actual) {
+                std::vector<float> expected(encoded.size()/2);
+                return state_decode(encoded.data(),expected.size(),StateCodec::Bf16,expected.data(),err) &&
+                       actual.size()==expected.size()*sizeof(float) &&
+                       std::memcmp(actual.data(),expected.data(),actual.size())==0;
+            };
+            check(got_coded.state_codec==0 && decoded_equals(copied[0].gdn,got_coded.gdn) &&
+                  decoded_equals(copied[0].dead,got_coded.dead) && decoded_equals(copied[0].tails,got_coded.tails) &&
+                  decoded_equals(copied[0].ple,got_coded.ple) && got_coded.block_pos==want_state.block_pos,
+                  "coded donor: the mounted checkpoint restores the correctly widened values");
+            ConversationKv got_coded_main,got_coded_draft;
+            check(conversation_kv_save(got_coded_main,main.state,g,at,true,err) &&
+                  conversation_kv_save(got_coded_draft,draft.state,g,at,false,err),
+                  "coded donor: capture the borrowed K/V");
+            // Restoring dead keys also rebuilds the indexer's spare pooled row from the widened keys.
+            ConversationKv expected_main=want_main;
+            const size_t spare=(size_t)(at/4)*g.idx_key_dim*sizeof(float); // this fixture's index block is 4
+            check(expected_main.pooled.visit(spare,got_coded.dead.size(),
+                      [&](uint8_t* dst,size_t n,size_t offset) {
+                          std::memcpy(dst,got_coded.dead.data()+offset-spare,n); return true;
+                      }),"coded donor: account for the widened spare pooled row");
+            check(equal(got_coded_main,expected_main) && equal(got_coded_draft,want_draft),
+                  "a coded donor borrows the same K/V, with only its widened spare pooled row");
+            // the size lie, not just the tag lie: relabel this coded image fp32 and its half-sized arrays are the
+            // wrong shape for a full-session validate (the same check the codec block below makes on image `c`)
+            SavedConversation relabelled_donor=coded_donor; relabelled_donor.live.state_codec=0;
+            relabelled_donor.checkpoints[0].state_codec=0;
+            check(!conversation_checkpoint_validate(relabelled_donor.checkpoints[0],ss,g,err),
+                  "a coded checkpoint read as fp32 is refused: its arrays are the wrong size for fp32");
+            check(coded_donor.live.state_codec==(uint8_t) StateCodec::Bf16 &&
+                  coded_donor.checkpoints[0].state_codec==(uint8_t) StateCodec::Bf16 &&
+                  coded_donor.live.gdn==kept.live.gdn && coded_donor.checkpoints[0].gdn==kept.checkpoints[0].gdn &&
+                  coded_donor.checkpoints[0].bytes()==kept.checkpoints[0].bytes(),
+                  "a borrow leaves the coded donor coded: its bytes and tags are untouched");
+        }
+        check(conversation_snapshot_restore(a,ss,g,draft.state,err)==ConversationRestore::restored,
+              "restore complete A before the independent codec-capture checks");
         // ---- the running-state codec (strata/core/state_codec.hpp). The state the session holds is fp32; a stored
         // copy may hold it as bf16. The session itself is never coded, and a coded copy is only ever read by a
         // restore, which widens it. Everything below compares against image `a`, the same state captured as fp32.

@@ -220,6 +220,13 @@ bool conversation_checkpoint_save(ConversationCheckpoint& c, const SessionState&
                                   const ModelGeometry& g, std::string& error) {
 #if defined(STRATA_GPU_METAL)
     (void) ss; (void) g;
+    // The Metal window writes fp32 bytes and never clears a codec tag set before the call, so a coded request
+    // would end up as fp32 bytes labelled bf16. Refuse it here rather than relabel: an fp32 checkpoint left at
+    // the API default is exactly the call it has always been. (A Metal codec implementation is out of scope.)
+    StateCodec requested = StateCodec::Fp32;
+    if (!codec_of(c, requested, error)) return false;
+    if (requested != StateCodec::Fp32)
+        return fail(error, "this backend stores the running state as fp32 only: a coded checkpoint cannot be saved");
     return strata::metal_engine::window_checkpoint_save(c, error);
 #endif
     ConversationStateSizes z;
@@ -265,6 +272,12 @@ bool conversation_checkpoint_restore(const ConversationCheckpoint& c, SessionSta
                                      const ModelGeometry& g, std::string& error) {
 #if defined(STRATA_GPU_METAL)
     (void) g;
+    // Same as the save: the window expects fp32-sized arrays and cannot widen a coded one. A checkpoint whose
+    // tag says bf16 is refused here, before its half-sized bytes are read as if they were fp32.
+    StateCodec wanted = StateCodec::Fp32;
+    if (!codec_of(c, wanted, error)) return false;
+    if (wanted != StateCodec::Fp32)
+        return fail(error, "this backend stores the running state as fp32 only: a coded checkpoint cannot be restored");
     if (!strata::metal_engine::window_checkpoint_restore(c, error)) return false;
     ss.ple_prev[0] = c.ids.size() >= 2 ? c.ids[c.ids.size() - 2] : -1;
     ss.ple_prev[1] = c.ids.size() >= 1 ? c.ids[c.ids.size() - 1] : -1;
