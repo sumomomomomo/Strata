@@ -1,0 +1,2888 @@
+{
+  "tested_code_commit": "a8d4049d07e5c9b74184248860303d507b3d1784",
+  "upstream_base": "8183c6b67162340c09b67360860177c577a65f2e",
+  "primary": {
+    "cases": 12,
+    "errors": [],
+    "groups": {
+      "upstream-32768": {
+        "cases": 2,
+        "actual_prompt_tokens": [
+          32528,
+          32528
+        ],
+        "cold_file_bytes": {
+          "n": 2,
+          "median": 733017672.0,
+          "min": 733017672,
+          "max": 733017672,
+          "runs": [
+            733017672,
+            733017672
+          ]
+        },
+        "cold_file_sha256": [
+          "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679"
+        ],
+        "cold_save_ms": {
+          "n": 2,
+          "median": 409.45,
+          "min": 391.7,
+          "max": 427.2,
+          "runs": [
+            391.7,
+            427.2
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 2,
+          "median": 446.20000000000005,
+          "min": 445.3,
+          "max": 447.1,
+          "runs": [
+            445.3,
+            447.1
+          ]
+        },
+        "park_ms": {
+          "n": 2,
+          "median": 329.45,
+          "min": 326.4,
+          "max": 332.5,
+          "runs": [
+            326.4,
+            332.5
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 2,
+          "median": 1087407464.0,
+          "min": 1087407464,
+          "max": 1087407464,
+          "runs": [
+            1087407464,
+            1087407464
+          ]
+        },
+        "resume_ms": {
+          "n": 2,
+          "median": 47.6,
+          "min": 46.6,
+          "max": 48.6,
+          "runs": [
+            46.6,
+            48.6
+          ]
+        },
+        "prefill_ms": {
+          "n": 2,
+          "median": 21627.75,
+          "min": 21611.3,
+          "max": 21644.2,
+          "runs": [
+            21644.2,
+            21611.3
+          ]
+        },
+        "continuation_tokens": [
+          512,
+          512
+        ],
+        "restored_recall_hits": 6,
+        "restored_recall_checks": 6,
+        "disk_restores_verified": 2,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 0
+        },
+        "warm_restore_ms": {
+          "n": 0
+        },
+        "warm_saved_tokens": [],
+        "warm_resumes_verified": 0,
+        "excluded_short_session_warm_samples": 6
+      },
+      "upstream-65536": {
+        "cases": 2,
+        "actual_prompt_tokens": [
+          67203,
+          67203
+        ],
+        "cold_file_bytes": {
+          "n": 2,
+          "median": 1262650604.0,
+          "min": 1262650604,
+          "max": 1262650604,
+          "runs": [
+            1262650604,
+            1262650604
+          ]
+        },
+        "cold_file_sha256": [
+          "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04"
+        ],
+        "cold_save_ms": {
+          "n": 2,
+          "median": 567.3,
+          "min": 512.9,
+          "max": 621.7,
+          "runs": [
+            512.9,
+            621.7
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 2,
+          "median": 795.45,
+          "min": 777.2,
+          "max": 813.7,
+          "runs": [
+            777.2,
+            813.7
+          ]
+        },
+        "park_ms": {
+          "n": 2,
+          "median": 563.75,
+          "min": 562.3,
+          "max": 565.2,
+          "runs": [
+            562.3,
+            565.2
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 2,
+          "median": 1853856588.0,
+          "min": 1853856588,
+          "max": 1853856588,
+          "runs": [
+            1853856588,
+            1853856588
+          ]
+        },
+        "resume_ms": {
+          "n": 2,
+          "median": 81.2,
+          "min": 80.4,
+          "max": 82.0,
+          "runs": [
+            80.4,
+            82.0
+          ]
+        },
+        "prefill_ms": {
+          "n": 2,
+          "median": 47671.350000000006,
+          "min": 47544.4,
+          "max": 47798.3,
+          "runs": [
+            47544.4,
+            47798.3
+          ]
+        },
+        "continuation_tokens": [
+          512,
+          512
+        ],
+        "restored_recall_hits": 6,
+        "restored_recall_checks": 6,
+        "disk_restores_verified": 2,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 0
+        },
+        "warm_restore_ms": {
+          "n": 0
+        },
+        "warm_saved_tokens": [],
+        "warm_resumes_verified": 0,
+        "excluded_short_session_warm_samples": 6
+      },
+      "fp32-32768": {
+        "cases": 2,
+        "actual_prompt_tokens": [
+          32528,
+          32528
+        ],
+        "cold_file_bytes": {
+          "n": 2,
+          "median": 733017672.0,
+          "min": 733017672,
+          "max": 733017672,
+          "runs": [
+            733017672,
+            733017672
+          ]
+        },
+        "cold_file_sha256": [
+          "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679"
+        ],
+        "cold_save_ms": {
+          "n": 2,
+          "median": 388.7,
+          "min": 355.7,
+          "max": 421.7,
+          "runs": [
+            355.7,
+            421.7
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 2,
+          "median": 450.35,
+          "min": 447.7,
+          "max": 453.0,
+          "runs": [
+            447.7,
+            453.0
+          ]
+        },
+        "park_ms": {
+          "n": 2,
+          "median": 329.54999999999995,
+          "min": 329.2,
+          "max": 329.9,
+          "runs": [
+            329.9,
+            329.2
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 2,
+          "median": 1087407496.0,
+          "min": 1087407496,
+          "max": 1087407496,
+          "runs": [
+            1087407496,
+            1087407496
+          ]
+        },
+        "resume_ms": {
+          "n": 2,
+          "median": 47.95,
+          "min": 47.7,
+          "max": 48.2,
+          "runs": [
+            47.7,
+            48.2
+          ]
+        },
+        "prefill_ms": {
+          "n": 2,
+          "median": 21688.25,
+          "min": 21675.1,
+          "max": 21701.4,
+          "runs": [
+            21701.4,
+            21675.1
+          ]
+        },
+        "continuation_tokens": [
+          512,
+          512
+        ],
+        "restored_recall_hits": 6,
+        "restored_recall_checks": 6,
+        "disk_restores_verified": 2,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 0
+        },
+        "warm_restore_ms": {
+          "n": 0
+        },
+        "warm_saved_tokens": [],
+        "warm_resumes_verified": 0,
+        "excluded_short_session_warm_samples": 6
+      },
+      "fp32-65536": {
+        "cases": 2,
+        "actual_prompt_tokens": [
+          67203,
+          67203
+        ],
+        "cold_file_bytes": {
+          "n": 2,
+          "median": 1262650604.0,
+          "min": 1262650604,
+          "max": 1262650604,
+          "runs": [
+            1262650604,
+            1262650604
+          ]
+        },
+        "cold_file_sha256": [
+          "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04"
+        ],
+        "cold_save_ms": {
+          "n": 2,
+          "median": 582.55,
+          "min": 548.9,
+          "max": 616.2,
+          "runs": [
+            548.9,
+            616.2
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 2,
+          "median": 779.45,
+          "min": 775.6,
+          "max": 783.3,
+          "runs": [
+            775.6,
+            783.3
+          ]
+        },
+        "park_ms": {
+          "n": 2,
+          "median": 564.65,
+          "min": 563.9,
+          "max": 565.4,
+          "runs": [
+            565.4,
+            563.9
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 2,
+          "median": 1853856636.0,
+          "min": 1853856636,
+          "max": 1853856636,
+          "runs": [
+            1853856636,
+            1853856636
+          ]
+        },
+        "resume_ms": {
+          "n": 2,
+          "median": 81.8,
+          "min": 81.6,
+          "max": 82.0,
+          "runs": [
+            81.6,
+            82.0
+          ]
+        },
+        "prefill_ms": {
+          "n": 2,
+          "median": 47748.75,
+          "min": 47728.2,
+          "max": 47769.3,
+          "runs": [
+            47728.2,
+            47769.3
+          ]
+        },
+        "continuation_tokens": [
+          512,
+          512
+        ],
+        "restored_recall_hits": 6,
+        "restored_recall_checks": 6,
+        "disk_restores_verified": 2,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 0
+        },
+        "warm_restore_ms": {
+          "n": 0
+        },
+        "warm_saved_tokens": [],
+        "warm_resumes_verified": 0,
+        "excluded_short_session_warm_samples": 6
+      },
+      "bf16-32768": {
+        "cases": 2,
+        "actual_prompt_tokens": [
+          32528,
+          32528
+        ],
+        "cold_file_bytes": {
+          "n": 2,
+          "median": 614954584.0,
+          "min": 614954584,
+          "max": 614954584,
+          "runs": [
+            614954584,
+            614954584
+          ]
+        },
+        "cold_file_sha256": [
+          "40c7a79895e8ce603256e3b6412d478fcc19029f3d37438dd959a81be902e62f",
+          "40c7a79895e8ce603256e3b6412d478fcc19029f3d37438dd959a81be902e62f"
+        ],
+        "cold_save_ms": {
+          "n": 2,
+          "median": 306.85,
+          "min": 275.3,
+          "max": 338.4,
+          "runs": [
+            275.3,
+            338.4
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 2,
+          "median": 385.85,
+          "min": 384.1,
+          "max": 387.6,
+          "runs": [
+            387.6,
+            384.1
+          ]
+        },
+        "park_ms": {
+          "n": 2,
+          "median": 262.79999999999995,
+          "min": 262.4,
+          "max": 263.2,
+          "runs": [
+            263.2,
+            262.4
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 2,
+          "median": 792249736.0,
+          "min": 792249736,
+          "max": 792249736,
+          "runs": [
+            792249736,
+            792249736
+          ]
+        },
+        "resume_ms": {
+          "n": 2,
+          "median": 51.2,
+          "min": 50.9,
+          "max": 51.5,
+          "runs": [
+            50.9,
+            51.5
+          ]
+        },
+        "prefill_ms": {
+          "n": 2,
+          "median": 21656.05,
+          "min": 21608.8,
+          "max": 21703.3,
+          "runs": [
+            21608.8,
+            21703.3
+          ]
+        },
+        "continuation_tokens": [
+          512,
+          512
+        ],
+        "restored_recall_hits": 6,
+        "restored_recall_checks": 6,
+        "disk_restores_verified": 2,
+        "coded_rewinds_verified": 2,
+        "warm_save_ms": {
+          "n": 0
+        },
+        "warm_restore_ms": {
+          "n": 0
+        },
+        "warm_saved_tokens": [],
+        "warm_resumes_verified": 0,
+        "excluded_short_session_warm_samples": 6
+      },
+      "bf16-65536": {
+        "cases": 2,
+        "actual_prompt_tokens": [
+          67203,
+          67203
+        ],
+        "cold_file_bytes": {
+          "n": 2,
+          "median": 1144587516.0,
+          "min": 1144587516,
+          "max": 1144587516,
+          "runs": [
+            1144587516,
+            1144587516
+          ]
+        },
+        "cold_file_sha256": [
+          "d1bac1c23dccd9500451a6201a2ce6e98f4e7a79732bc768cdb7fad789dd06b5",
+          "d1bac1c23dccd9500451a6201a2ce6e98f4e7a79732bc768cdb7fad789dd06b5"
+        ],
+        "cold_save_ms": {
+          "n": 2,
+          "median": 445.1,
+          "min": 443.1,
+          "max": 447.1,
+          "runs": [
+            443.1,
+            447.1
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 2,
+          "median": 736.0999999999999,
+          "min": 711.9,
+          "max": 760.3,
+          "runs": [
+            760.3,
+            711.9
+          ]
+        },
+        "park_ms": {
+          "n": 2,
+          "median": 462.8,
+          "min": 461.8,
+          "max": 463.8,
+          "runs": [
+            461.8,
+            463.8
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 2,
+          "median": 1440635772.0,
+          "min": 1440635772,
+          "max": 1440635772,
+          "runs": [
+            1440635772,
+            1440635772
+          ]
+        },
+        "resume_ms": {
+          "n": 2,
+          "median": 82.4,
+          "min": 81.5,
+          "max": 83.3,
+          "runs": [
+            81.5,
+            83.3
+          ]
+        },
+        "prefill_ms": {
+          "n": 2,
+          "median": 47724.75,
+          "min": 47711.3,
+          "max": 47738.2,
+          "runs": [
+            47711.3,
+            47738.2
+          ]
+        },
+        "continuation_tokens": [
+          512,
+          512
+        ],
+        "restored_recall_hits": 6,
+        "restored_recall_checks": 6,
+        "disk_restores_verified": 2,
+        "coded_rewinds_verified": 2,
+        "warm_save_ms": {
+          "n": 0
+        },
+        "warm_restore_ms": {
+          "n": 0
+        },
+        "warm_saved_tokens": [],
+        "warm_resumes_verified": 0,
+        "excluded_short_session_warm_samples": 6
+      }
+    },
+    "logit_comparisons": [
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-32768",
+        "request": "resume_A",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 18,
+          "top1_b": 18,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-32768",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r0-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.435284
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r0-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 20.932716
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.335607,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.005009938,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-32768",
+        "request": "continuation",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r0-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r0-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 64,
+          "top1_b": 64,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-65536",
+        "request": "resume_A",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-65536",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r0-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 20.959089
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r0-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.342907
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.121047,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.002493869,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-65536",
+        "request": "continuation",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r0-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r0-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 91,
+          "top1_b": 91,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r1-32768",
+        "request": "resume_A",
+        "round": 1,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r1-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r1-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 18,
+          "top1_b": 18,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r1-32768",
+        "request": "rewind_mid",
+        "round": 1,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r1-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.405865
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r1-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.120171
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.067719,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.000623362,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r1-32768",
+        "request": "continuation",
+        "round": 1,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r1-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r1-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 64,
+          "top1_b": 64,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r1-65536",
+        "request": "resume_A",
+        "round": 1,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r1-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r1-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r1-65536",
+        "request": "rewind_mid",
+        "round": 1,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r1-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.026169
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r1-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.371822
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.213976,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.002296976,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r1-65536",
+        "request": "continuation",
+        "round": 1,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/upstream-r1-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/fp32-r1-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 91,
+          "top1_b": 91,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-32768",
+        "request": "resume_A",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.470184
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.755837,
+          "top1_a": 18,
+          "top1_b": 760,
+          "top1_agree": false,
+          "kl_A_given_B": 0.048051088,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-32768",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r0-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 20.932716
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r0-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.832417
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.834088,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.016466526,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-32768",
+        "request": "continuation",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r0-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r0-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 16.948868
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 2.291923,
+          "top1_a": 64,
+          "top1_b": 64,
+          "top1_agree": true,
+          "kl_A_given_B": 0.046064663,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-65536",
+        "request": "resume_A",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.255316
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.662671,
+          "top1_a": 10399,
+          "top1_b": 18,
+          "top1_agree": false,
+          "kl_A_given_B": 0.022407018,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-65536",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r0-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.342907
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r0-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.582241
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.491756,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.000715408,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-65536",
+        "request": "continuation",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r0-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r0-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.450829
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 2.030671,
+          "top1_a": 91,
+          "top1_b": 91,
+          "top1_agree": true,
+          "kl_A_given_B": 0.053218779,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r1-32768",
+        "request": "resume_A",
+        "round": 1,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r1-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r1-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.470184
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.755837,
+          "top1_a": 18,
+          "top1_b": 760,
+          "top1_agree": false,
+          "kl_A_given_B": 0.048051088,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r1-32768",
+        "request": "rewind_mid",
+        "round": 1,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r1-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.120171
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r1-32768/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.076595
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.785434,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.00189513,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r1-32768",
+        "request": "continuation",
+        "round": 1,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r1-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r1-32768/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 16.948868
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 2.291923,
+          "top1_a": 64,
+          "top1_b": 64,
+          "top1_agree": true,
+          "kl_A_given_B": 0.046064663,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r1-65536",
+        "request": "resume_A",
+        "round": 1,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r1-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r1-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.255316
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.662671,
+          "top1_a": 10399,
+          "top1_b": 18,
+          "top1_agree": false,
+          "kl_A_given_B": 0.022407018,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r1-65536",
+        "request": "rewind_mid",
+        "round": 1,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r1-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.371822
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r1-65536/first-logits.3",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.582241
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.452962,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.000788503,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r1-65536",
+        "request": "continuation",
+        "round": 1,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/full-results/fp32-r1-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "dump_b": {
+          "path": "$VALIDATION/full-results/bf16-r1-65536/first-logits.5",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.450829
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 2.030671,
+          "top1_a": 91,
+          "top1_b": 91,
+          "top1_agree": true,
+          "kl_A_given_B": 0.053218779,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      }
+    ],
+    "session_file_comparisons": [
+      {
+        "case_key": "upstream-r0-32768",
+        "round": 0,
+        "size": 32768,
+        "kind": "first_save",
+        "upstream": {
+          "filename": "upstream-r0-32768-A-first.json",
+          "file_bytes": 733017672,
+          "sha256": "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "rebased_fp32": {
+          "filename": "fp32-r0-32768-A-first.json",
+          "file_bytes": 733017672,
+          "sha256": "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "same_sha256": true,
+        "same_bytes": true,
+        "expected_versions": {
+          "upstream": 1,
+          "rebased_fp32": 1
+        },
+        "caveat": "identical bytes are only evidence of compatibility when the two prompts were identical; check the case's prompt hashes and answers before reading this as a match"
+      },
+      {
+        "case_key": "upstream-r0-65536",
+        "round": 0,
+        "size": 65536,
+        "kind": "first_save",
+        "upstream": {
+          "filename": "upstream-r0-65536-A-first.json",
+          "file_bytes": 1262650604,
+          "sha256": "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "rebased_fp32": {
+          "filename": "fp32-r0-65536-A-first.json",
+          "file_bytes": 1262650604,
+          "sha256": "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "same_sha256": true,
+        "same_bytes": true,
+        "expected_versions": {
+          "upstream": 1,
+          "rebased_fp32": 1
+        },
+        "caveat": "identical bytes are only evidence of compatibility when the two prompts were identical; check the case's prompt hashes and answers before reading this as a match"
+      },
+      {
+        "case_key": "upstream-r1-32768",
+        "round": 1,
+        "size": 32768,
+        "kind": "first_save",
+        "upstream": {
+          "filename": "upstream-r1-32768-A-first.json",
+          "file_bytes": 733017672,
+          "sha256": "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "rebased_fp32": {
+          "filename": "fp32-r1-32768-A-first.json",
+          "file_bytes": 733017672,
+          "sha256": "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "same_sha256": true,
+        "same_bytes": true,
+        "expected_versions": {
+          "upstream": 1,
+          "rebased_fp32": 1
+        },
+        "caveat": "identical bytes are only evidence of compatibility when the two prompts were identical; check the case's prompt hashes and answers before reading this as a match"
+      },
+      {
+        "case_key": "upstream-r1-65536",
+        "round": 1,
+        "size": 65536,
+        "kind": "first_save",
+        "upstream": {
+          "filename": "upstream-r1-65536-A-first.json",
+          "file_bytes": 1262650604,
+          "sha256": "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "rebased_fp32": {
+          "filename": "fp32-r1-65536-A-first.json",
+          "file_bytes": 1262650604,
+          "sha256": "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "same_sha256": true,
+        "same_bytes": true,
+        "expected_versions": {
+          "upstream": 1,
+          "rebased_fp32": 1
+        },
+        "caveat": "identical bytes are only evidence of compatibility when the two prompts were identical; check the case's prompt hashes and answers before reading this as a match"
+      }
+    ]
+  },
+  "control": {
+    "cases": 6,
+    "errors": [],
+    "groups": {
+      "upstream-32768": {
+        "cases": 1,
+        "actual_prompt_tokens": [
+          32528
+        ],
+        "cold_file_bytes": {
+          "n": 1,
+          "median": 733017672,
+          "min": 733017672,
+          "max": 733017672,
+          "runs": [
+            733017672
+          ]
+        },
+        "cold_file_sha256": [
+          "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679"
+        ],
+        "cold_save_ms": {
+          "n": 1,
+          "median": 398.7,
+          "min": 398.7,
+          "max": 398.7,
+          "runs": [
+            398.7
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 1,
+          "median": 505.6,
+          "min": 505.6,
+          "max": 505.6,
+          "runs": [
+            505.6
+          ]
+        },
+        "park_ms": {
+          "n": 1,
+          "median": 325.9,
+          "min": 325.9,
+          "max": 325.9,
+          "runs": [
+            325.9
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 1,
+          "median": 1087407464,
+          "min": 1087407464,
+          "max": 1087407464,
+          "runs": [
+            1087407464
+          ]
+        },
+        "resume_ms": {
+          "n": 1,
+          "median": 46.3,
+          "min": 46.3,
+          "max": 46.3,
+          "runs": [
+            46.3
+          ]
+        },
+        "prefill_ms": {
+          "n": 1,
+          "median": 21644.2,
+          "min": 21644.2,
+          "max": 21644.2,
+          "runs": [
+            21644.2
+          ]
+        },
+        "continuation_tokens": [
+          512
+        ],
+        "restored_recall_hits": 3,
+        "restored_recall_checks": 3,
+        "disk_restores_verified": 1,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 3,
+          "median": 386.1,
+          "min": 356.2,
+          "max": 386.4,
+          "runs": [
+            356.2,
+            386.4,
+            386.1
+          ]
+        },
+        "warm_restore_ms": {
+          "n": 3,
+          "median": 457.2,
+          "min": 452.0,
+          "max": 463.9,
+          "runs": [
+            457.2,
+            452.0,
+            463.9
+          ]
+        },
+        "warm_saved_tokens": [
+          32570,
+          32570,
+          32570
+        ],
+        "warm_resumes_verified": 3,
+        "excluded_short_session_warm_samples": 0
+      },
+      "upstream-65536": {
+        "cases": 1,
+        "actual_prompt_tokens": [
+          67203
+        ],
+        "cold_file_bytes": {
+          "n": 1,
+          "median": 1262650604,
+          "min": 1262650604,
+          "max": 1262650604,
+          "runs": [
+            1262650604
+          ]
+        },
+        "cold_file_sha256": [
+          "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04"
+        ],
+        "cold_save_ms": {
+          "n": 1,
+          "median": 563.0,
+          "min": 563.0,
+          "max": 563.0,
+          "runs": [
+            563.0
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 1,
+          "median": 782.6,
+          "min": 782.6,
+          "max": 782.6,
+          "runs": [
+            782.6
+          ]
+        },
+        "park_ms": {
+          "n": 1,
+          "median": 565.4,
+          "min": 565.4,
+          "max": 565.4,
+          "runs": [
+            565.4
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 1,
+          "median": 1853856588,
+          "min": 1853856588,
+          "max": 1853856588,
+          "runs": [
+            1853856588
+          ]
+        },
+        "resume_ms": {
+          "n": 1,
+          "median": 80.4,
+          "min": 80.4,
+          "max": 80.4,
+          "runs": [
+            80.4
+          ]
+        },
+        "prefill_ms": {
+          "n": 1,
+          "median": 47717.5,
+          "min": 47717.5,
+          "max": 47717.5,
+          "runs": [
+            47717.5
+          ]
+        },
+        "continuation_tokens": [
+          512
+        ],
+        "restored_recall_hits": 3,
+        "restored_recall_checks": 3,
+        "disk_restores_verified": 1,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 3,
+          "median": 649.9,
+          "min": 622.9,
+          "max": 658.5,
+          "runs": [
+            658.5,
+            622.9,
+            649.9
+          ]
+        },
+        "warm_restore_ms": {
+          "n": 3,
+          "median": 777.1,
+          "min": 772.4,
+          "max": 777.9,
+          "runs": [
+            777.9,
+            777.1,
+            772.4
+          ]
+        },
+        "warm_saved_tokens": [
+          67248,
+          67248,
+          67248
+        ],
+        "warm_resumes_verified": 3,
+        "excluded_short_session_warm_samples": 0
+      },
+      "fp32-32768": {
+        "cases": 1,
+        "actual_prompt_tokens": [
+          32528
+        ],
+        "cold_file_bytes": {
+          "n": 1,
+          "median": 733017672,
+          "min": 733017672,
+          "max": 733017672,
+          "runs": [
+            733017672
+          ]
+        },
+        "cold_file_sha256": [
+          "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679"
+        ],
+        "cold_save_ms": {
+          "n": 1,
+          "median": 361.5,
+          "min": 361.5,
+          "max": 361.5,
+          "runs": [
+            361.5
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 1,
+          "median": 545.8,
+          "min": 545.8,
+          "max": 545.8,
+          "runs": [
+            545.8
+          ]
+        },
+        "park_ms": {
+          "n": 1,
+          "median": 329.8,
+          "min": 329.8,
+          "max": 329.8,
+          "runs": [
+            329.8
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 1,
+          "median": 1087407496,
+          "min": 1087407496,
+          "max": 1087407496,
+          "runs": [
+            1087407496
+          ]
+        },
+        "resume_ms": {
+          "n": 1,
+          "median": 47.5,
+          "min": 47.5,
+          "max": 47.5,
+          "runs": [
+            47.5
+          ]
+        },
+        "prefill_ms": {
+          "n": 1,
+          "median": 21651.4,
+          "min": 21651.4,
+          "max": 21651.4,
+          "runs": [
+            21651.4
+          ]
+        },
+        "continuation_tokens": [
+          512
+        ],
+        "restored_recall_hits": 3,
+        "restored_recall_checks": 3,
+        "disk_restores_verified": 1,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 3,
+          "median": 398.9,
+          "min": 347.7,
+          "max": 412.9,
+          "runs": [
+            398.9,
+            347.7,
+            412.9
+          ]
+        },
+        "warm_restore_ms": {
+          "n": 3,
+          "median": 449.2,
+          "min": 446.6,
+          "max": 449.7,
+          "runs": [
+            446.6,
+            449.2,
+            449.7
+          ]
+        },
+        "warm_saved_tokens": [
+          32570,
+          32570,
+          32570
+        ],
+        "warm_resumes_verified": 3,
+        "excluded_short_session_warm_samples": 0
+      },
+      "fp32-65536": {
+        "cases": 1,
+        "actual_prompt_tokens": [
+          67203
+        ],
+        "cold_file_bytes": {
+          "n": 1,
+          "median": 1262650604,
+          "min": 1262650604,
+          "max": 1262650604,
+          "runs": [
+            1262650604
+          ]
+        },
+        "cold_file_sha256": [
+          "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04"
+        ],
+        "cold_save_ms": {
+          "n": 1,
+          "median": 550.8,
+          "min": 550.8,
+          "max": 550.8,
+          "runs": [
+            550.8
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 1,
+          "median": 823.7,
+          "min": 823.7,
+          "max": 823.7,
+          "runs": [
+            823.7
+          ]
+        },
+        "park_ms": {
+          "n": 1,
+          "median": 563.9,
+          "min": 563.9,
+          "max": 563.9,
+          "runs": [
+            563.9
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 1,
+          "median": 1853856636,
+          "min": 1853856636,
+          "max": 1853856636,
+          "runs": [
+            1853856636
+          ]
+        },
+        "resume_ms": {
+          "n": 1,
+          "median": 80.4,
+          "min": 80.4,
+          "max": 80.4,
+          "runs": [
+            80.4
+          ]
+        },
+        "prefill_ms": {
+          "n": 1,
+          "median": 47720.6,
+          "min": 47720.6,
+          "max": 47720.6,
+          "runs": [
+            47720.6
+          ]
+        },
+        "continuation_tokens": [
+          512
+        ],
+        "restored_recall_hits": 3,
+        "restored_recall_checks": 3,
+        "disk_restores_verified": 1,
+        "coded_rewinds_verified": 0,
+        "warm_save_ms": {
+          "n": 3,
+          "median": 578.2,
+          "min": 563.8,
+          "max": 609.0,
+          "runs": [
+            578.2,
+            609.0,
+            563.8
+          ]
+        },
+        "warm_restore_ms": {
+          "n": 3,
+          "median": 783.3,
+          "min": 778.2,
+          "max": 856.9,
+          "runs": [
+            783.3,
+            778.2,
+            856.9
+          ]
+        },
+        "warm_saved_tokens": [
+          67248,
+          67248,
+          67248
+        ],
+        "warm_resumes_verified": 3,
+        "excluded_short_session_warm_samples": 0
+      },
+      "bf16-32768": {
+        "cases": 1,
+        "actual_prompt_tokens": [
+          32528
+        ],
+        "cold_file_bytes": {
+          "n": 1,
+          "median": 614954584,
+          "min": 614954584,
+          "max": 614954584,
+          "runs": [
+            614954584
+          ]
+        },
+        "cold_file_sha256": [
+          "40c7a79895e8ce603256e3b6412d478fcc19029f3d37438dd959a81be902e62f"
+        ],
+        "cold_save_ms": {
+          "n": 1,
+          "median": 279.6,
+          "min": 279.6,
+          "max": 279.6,
+          "runs": [
+            279.6
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 1,
+          "median": 386.4,
+          "min": 386.4,
+          "max": 386.4,
+          "runs": [
+            386.4
+          ]
+        },
+        "park_ms": {
+          "n": 1,
+          "median": 262.0,
+          "min": 262.0,
+          "max": 262.0,
+          "runs": [
+            262.0
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 1,
+          "median": 792249736,
+          "min": 792249736,
+          "max": 792249736,
+          "runs": [
+            792249736
+          ]
+        },
+        "resume_ms": {
+          "n": 1,
+          "median": 52.8,
+          "min": 52.8,
+          "max": 52.8,
+          "runs": [
+            52.8
+          ]
+        },
+        "prefill_ms": {
+          "n": 1,
+          "median": 21690.1,
+          "min": 21690.1,
+          "max": 21690.1,
+          "runs": [
+            21690.1
+          ]
+        },
+        "continuation_tokens": [
+          512
+        ],
+        "restored_recall_hits": 3,
+        "restored_recall_checks": 3,
+        "disk_restores_verified": 1,
+        "coded_rewinds_verified": 1,
+        "warm_save_ms": {
+          "n": 3,
+          "median": 273.2,
+          "min": 248.0,
+          "max": 299.2,
+          "runs": [
+            299.2,
+            273.2,
+            248.0
+          ]
+        },
+        "warm_restore_ms": {
+          "n": 3,
+          "median": 386.4,
+          "min": 383.3,
+          "max": 437.8,
+          "runs": [
+            386.4,
+            383.3,
+            437.8
+          ]
+        },
+        "warm_saved_tokens": [
+          32573,
+          32573,
+          32573
+        ],
+        "warm_resumes_verified": 3,
+        "excluded_short_session_warm_samples": 0
+      },
+      "bf16-65536": {
+        "cases": 1,
+        "actual_prompt_tokens": [
+          67203
+        ],
+        "cold_file_bytes": {
+          "n": 1,
+          "median": 1144587516,
+          "min": 1144587516,
+          "max": 1144587516,
+          "runs": [
+            1144587516
+          ]
+        },
+        "cold_file_sha256": [
+          "d1bac1c23dccd9500451a6201a2ce6e98f4e7a79732bc768cdb7fad789dd06b5"
+        ],
+        "cold_save_ms": {
+          "n": 1,
+          "median": 441.5,
+          "min": 441.5,
+          "max": 441.5,
+          "runs": [
+            441.5
+          ]
+        },
+        "cold_restore_ms": {
+          "n": 1,
+          "median": 745.2,
+          "min": 745.2,
+          "max": 745.2,
+          "runs": [
+            745.2
+          ]
+        },
+        "park_ms": {
+          "n": 1,
+          "median": 465.1,
+          "min": 465.1,
+          "max": 465.1,
+          "runs": [
+            465.1
+          ]
+        },
+        "park_snapshot_bytes": {
+          "n": 1,
+          "median": 1440635772,
+          "min": 1440635772,
+          "max": 1440635772,
+          "runs": [
+            1440635772
+          ]
+        },
+        "resume_ms": {
+          "n": 1,
+          "median": 84.0,
+          "min": 84.0,
+          "max": 84.0,
+          "runs": [
+            84.0
+          ]
+        },
+        "prefill_ms": {
+          "n": 1,
+          "median": 47680.9,
+          "min": 47680.9,
+          "max": 47680.9,
+          "runs": [
+            47680.9
+          ]
+        },
+        "continuation_tokens": [
+          512
+        ],
+        "restored_recall_hits": 3,
+        "restored_recall_checks": 3,
+        "disk_restores_verified": 1,
+        "coded_rewinds_verified": 1,
+        "warm_save_ms": {
+          "n": 3,
+          "median": 434.2,
+          "min": 417.1,
+          "max": 452.5,
+          "runs": [
+            434.2,
+            417.1,
+            452.5
+          ]
+        },
+        "warm_restore_ms": {
+          "n": 3,
+          "median": 717.9,
+          "min": 716.5,
+          "max": 725.2,
+          "runs": [
+            725.2,
+            716.5,
+            717.9
+          ]
+        },
+        "warm_saved_tokens": [
+          67249,
+          67248,
+          67248
+        ],
+        "warm_resumes_verified": 3,
+        "excluded_short_session_warm_samples": 0
+      }
+    },
+    "logit_comparisons": [
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-32768",
+        "request": "resume_A",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/upstream-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/fp32-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 18,
+          "top1_b": 18,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-32768",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/upstream-r0-32768/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.211651
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/fp32-r0-32768/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.211651
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-32768",
+        "request": "continuation",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/upstream-r0-32768/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/fp32-r0-32768/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 64,
+          "top1_b": 64,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-65536",
+        "request": "resume_A",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/upstream-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/fp32-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-65536",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/upstream-r0-65536/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.266714
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/fp32-r0-65536/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.266714
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "upstream|fp32",
+        "case_key": "upstream-r0-65536",
+        "request": "continuation",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/upstream-r0-65536/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/fp32-r0-65536/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 0.0,
+          "top1_a": 91,
+          "top1_b": 91,
+          "top1_agree": true,
+          "kl_A_given_B": 0.0,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-32768",
+        "request": "resume_A",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/fp32-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.454044
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/bf16-r0-32768/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.470184
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.755837,
+          "top1_a": 18,
+          "top1_b": 760,
+          "top1_agree": false,
+          "kl_A_given_B": 0.048051088,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-32768",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/fp32-r0-32768/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.211651
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/bf16-r0-32768/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 20.924423
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.459366,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.000805472,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-32768",
+        "request": "continuation",
+        "round": 0,
+        "size": 32768,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/fp32-r0-32768/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.037483
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/bf16-r0-32768/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 16.948868
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 2.291923,
+          "top1_a": 64,
+          "top1_b": 64,
+          "top1_agree": true,
+          "kl_A_given_B": 0.046064663,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-65536",
+        "request": "resume_A",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/fp32-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 17.956043
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/bf16-r0-65536/first-logits.2",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 18.255316
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.662671,
+          "top1_a": 10399,
+          "top1_b": 18,
+          "top1_agree": false,
+          "kl_A_given_B": 0.022407018,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-65536",
+        "request": "rewind_mid",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/fp32-r0-65536/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.266714
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/bf16-r0-65536/first-logits.4",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 21.16024
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 1.777518,
+          "top1_a": 10399,
+          "top1_b": 10399,
+          "top1_agree": true,
+          "kl_A_given_B": 0.000649282,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": false,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      },
+      {
+        "pair": "fp32|bf16",
+        "case_key": "fp32-r0-65536",
+        "request": "continuation",
+        "round": 0,
+        "size": 65536,
+        "dump_a": {
+          "path": "$VALIDATION/control-results/fp32-r0-65536/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.374083
+        },
+        "dump_b": {
+          "path": "$VALIDATION/control-results/bf16-r0-65536/first-logits.6",
+          "bytes": 993280,
+          "vocab_floats": 248320,
+          "finite_count": 248320,
+          "nonfinite_count": 0,
+          "max_abs_finite": 15.450829
+        },
+        "matched": true,
+        "comparison": {
+          "vocab_floats_compared": 248320,
+          "finite_a": 248320,
+          "finite_b": 248320,
+          "max_abs_logit_diff": 2.030671,
+          "top1_a": 91,
+          "top1_b": 91,
+          "top1_agree": true,
+          "kl_A_given_B": 0.053218779,
+          "kl_is_infinite": false
+        },
+        "restored_state_verified": true,
+        "scope_note": "first generated token of this request only, at the position the engine actually dumped; not a teacher-forced comparison of the whole continuation"
+      }
+    ],
+    "session_file_comparisons": [
+      {
+        "case_key": "upstream-r0-32768",
+        "round": 0,
+        "size": 32768,
+        "kind": "first_save",
+        "upstream": {
+          "filename": "upstream-r0-32768-A-first.json",
+          "file_bytes": 733017672,
+          "sha256": "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "rebased_fp32": {
+          "filename": "fp32-r0-32768-A-first.json",
+          "file_bytes": 733017672,
+          "sha256": "26e447f20742b0ce124045dc12c70ec10f79ef873a24a2886a6714d6dde0e679",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "same_sha256": true,
+        "same_bytes": true,
+        "expected_versions": {
+          "upstream": 1,
+          "rebased_fp32": 1
+        },
+        "caveat": "identical bytes are only evidence of compatibility when the two prompts were identical; check the case's prompt hashes and answers before reading this as a match"
+      },
+      {
+        "case_key": "upstream-r0-65536",
+        "round": 0,
+        "size": 65536,
+        "kind": "first_save",
+        "upstream": {
+          "filename": "upstream-r0-65536-A-first.json",
+          "file_bytes": 1262650604,
+          "sha256": "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "rebased_fp32": {
+          "filename": "fp32-r0-65536-A-first.json",
+          "file_bytes": 1262650604,
+          "sha256": "3b4acd51c2a5d97feb7ba860f3138230b28b068e43d3360b516bf30acd97df04",
+          "header": {
+            "exists": true,
+            "magic_ok": true,
+            "version": 1,
+            "version_meaning": "v1 (running state fp32 in every checkpoint)"
+          }
+        },
+        "same_sha256": true,
+        "same_bytes": true,
+        "expected_versions": {
+          "upstream": 1,
+          "rebased_fp32": 1
+        },
+        "caveat": "identical bytes are only evidence of compatibility when the two prompts were identical; check the case's prompt hashes and answers before reading this as a match"
+      }
+    ]
+  },
+  "limitations": [
+    "Primary warm samples saved short side conversations and are excluded from long-context timing claims.",
+    "Primary retained upstream adaptive CPU prompt sharing; the control sets STRATA_PREFILL_CPU_SHARE=0.",
+    "Control warm cycles preserve the full conversation and assert the API-reported saved token count.",
+    "Logit comparisons cover sampled first generated positions, not teacher-forced whole continuations.",
+    "HIP/SYCL/Metal and Windows were not built/run; real multi-GPU validation was not performed."
+  ],
+  "binary_sha256": {
+    "upstream": "dfd3e83a989e6a8f79e0f0f7d651e462828aab6213cf95623dde7010f9492603",
+    "rebased": "55cec3f7ec0992d833c14ad7f155c92d2632f7a145d388a5cac470bd8c549d29"
+  },
+  "harness_sha256": {
+    "model_validation_primary.py": "63f356a5e8b337d1c53a2e1e18075fea3cbc272ac4ef8757865398012deae6a4",
+    "model_validation.py": "dec955325cfce0e5a5319a4027ca240a3ff227552fda3069902f965eea637ad3"
+  },
+  "platform": {
+    "gpu": "Tesla V100-PCIE-32GB",
+    "cuda": "12.8",
+    "driver": "580.178.04",
+    "ram_gib": 93.6,
+    "cpu": "Genuine Intel(R) 0000"
+  },
+  "expert_profile_sha256": "8f59b4aa8873209dff11c11e37bcda9529a1335b724a1afeea37bf6388975baf",
+  "default_fp32_continuations": [
+    {
+      "dataset": "full-results",
+      "round": 0,
+      "size": 32768,
+      "same_text": true,
+      "upstream_sha256": "b97359731a5ae391559f60323bfd665f5d7cd661f2035efbf45136ad80295cac",
+      "rebased_fp32_sha256": "b97359731a5ae391559f60323bfd665f5d7cd661f2035efbf45136ad80295cac",
+      "upstream_generated_tokens": 512,
+      "rebased_generated_tokens": 512
+    },
+    {
+      "dataset": "full-results",
+      "round": 0,
+      "size": 65536,
+      "same_text": true,
+      "upstream_sha256": "bbd835526274c1b62222aa6229d5ec9af04b1c4c2a7bcdedbe1b6ad199ce40e8",
+      "rebased_fp32_sha256": "bbd835526274c1b62222aa6229d5ec9af04b1c4c2a7bcdedbe1b6ad199ce40e8",
+      "upstream_generated_tokens": 512,
+      "rebased_generated_tokens": 512
+    },
+    {
+      "dataset": "full-results",
+      "round": 1,
+      "size": 32768,
+      "same_text": true,
+      "upstream_sha256": "b97359731a5ae391559f60323bfd665f5d7cd661f2035efbf45136ad80295cac",
+      "rebased_fp32_sha256": "b97359731a5ae391559f60323bfd665f5d7cd661f2035efbf45136ad80295cac",
+      "upstream_generated_tokens": 512,
+      "rebased_generated_tokens": 512
+    },
+    {
+      "dataset": "full-results",
+      "round": 1,
+      "size": 65536,
+      "same_text": true,
+      "upstream_sha256": "bbd835526274c1b62222aa6229d5ec9af04b1c4c2a7bcdedbe1b6ad199ce40e8",
+      "rebased_fp32_sha256": "bbd835526274c1b62222aa6229d5ec9af04b1c4c2a7bcdedbe1b6ad199ce40e8",
+      "upstream_generated_tokens": 512,
+      "rebased_generated_tokens": 512
+    },
+    {
+      "dataset": "control-results",
+      "round": 0,
+      "size": 32768,
+      "same_text": true,
+      "upstream_sha256": "b97359731a5ae391559f60323bfd665f5d7cd661f2035efbf45136ad80295cac",
+      "rebased_fp32_sha256": "b97359731a5ae391559f60323bfd665f5d7cd661f2035efbf45136ad80295cac",
+      "upstream_generated_tokens": 512,
+      "rebased_generated_tokens": 512
+    },
+    {
+      "dataset": "control-results",
+      "round": 0,
+      "size": 65536,
+      "same_text": true,
+      "upstream_sha256": "bbd835526274c1b62222aa6229d5ec9af04b1c4c2a7bcdedbe1b6ad199ce40e8",
+      "rebased_fp32_sha256": "bbd835526274c1b62222aa6229d5ec9af04b1c4c2a7bcdedbe1b6ad199ce40e8",
+      "upstream_generated_tokens": 512,
+      "rebased_generated_tokens": 512
+    }
+  ],
+  "portable_runner_sha256": "f0f88ec9298ec8aef99d30f618b28454a8edd49ecc69246bf7e87e3ded546627"
+}

@@ -9,9 +9,30 @@ The measured benefits are smaller session files, lower retained-state storage an
 parked resumes cost approximately 2–6 ms more in the tested workloads. At 32K context, BF16 with 8K checkpoint
 spacing delivered comparable complete-turn latency to FP32 with the default 16K spacing.
 
-The [public benchmark repository](https://github.com/sumomomomomo/strata-bf16-bench-artifacts) contains the harness,
+The [public benchmark repository](https://github.com/sumomomomomo/strata-bf16-bench-artifacts) contains the historical harness,
 raw JSON and engine logs. Its [manifest](https://github.com/sumomomomomo/strata-bf16-bench-artifacts/blob/main/MANIFEST.md)
 maps results to claims, distinguishes historical runs and records provenance gaps.
+
+## Rebase validation, 2026-10-24
+
+The option was rebased onto upstream `8183c6b6`; tested engine code is `a8d4049d`.
+The [V100 report and reproducible control harness](../bench/results/2026-10-24-state-codec-rebase/README.md)
+include current measurements and individual samples. The older measurements in the sections below retain their
+original revision/provenance and are not measurements of the rebased engine.
+
+On the V100 PCIe 32 GB, all 11 focused regression checks passed; seven host tests also built and passed without CUDA.
+Across the model matrices, all six upstream/rebased FP32 session files and six 512-token continuation texts matched
+exactly. With adaptive CPU prompt sharing disabled, all six sampled first-token logit vectors matched exactly too.
+
+For observed prompts of 32,528 and 67,203 tokens, BF16 session files were 16.1% and 9.4% smaller. Cache-accounted
+parked images were smaller, and two-run median parking time fell by about 20% and 18%. Continuing parked resumes
+were about 3.3 ms and 0.6 ms slower in those comparisons. The report separates these measurements from warm disk
+operations and does not claim faster token generation.
+
+All 54 checked code words were recovered after parked resumption, but BF16 changed the top token at two of six
+sampled restored-state positions. Full-vocabulary KL ranged from 0.000649282 to 0.053218779 nats in the fixed-path
+control. These limited recall/logit checks do not establish equivalent model quality or replace maintainer review.
+HIP, SYCL, Metal, Windows and real multi-GPU model validation remain untested for this rebased code.
 
 ## Usage and scope
 
@@ -22,6 +43,8 @@ Add the option to the engine arguments used by the server:
 ```
 
 The default is `fp32`. Unknown codec names are rejected at startup.
+The Metal backend rejects `bf16` at startup and refuses coded checkpoint inputs; its existing FP32 path is preserved.
+A Metal BF16 implementation is outside this change, and the new guards/linkage have not been built on macOS.
 
 The option governs newly captured retained checkpoints and newly written parked images and session files.
 Every existing checkpoint is read using its own recorded codec, independently of the configured write codec.

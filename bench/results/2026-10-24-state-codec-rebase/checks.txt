@@ -1,0 +1,201 @@
+===== upstream-host-tests.log =====
+Internal ctest changing into directory: $VALIDATION/build-upstream
+Test project $VALIDATION/build-upstream
+    Start 1: conversation_cache_test
+1/5 Test #1: conversation_cache_test ...........   Passed    0.10 sec
+    Start 2: conversation_split_failure_test
+2/5 Test #2: conversation_split_failure_test ...   Passed    0.00 sec
+    Start 3: conversation_memory_test
+3/5 Test #3: conversation_memory_test ..........   Passed    0.00 sec
+    Start 4: conversation_file_test
+4/5 Test #4: conversation_file_test ............   Passed    1.31 sec
+    Start 5: session_save_reclaim_test
+5/5 Test #5: session_save_reclaim_test .........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =   1.42 sec
+
+===== upstream-v100-tests.log =====
+Internal ctest changing into directory: $VALIDATION/build-upstream
+Test project $VALIDATION/build-upstream
+    Start 39: conversation_snapshot_test
+1/2 Test #39: conversation_snapshot_test .......   Passed    0.55 sec
+    Start 40: conversation_validation_test
+2/2 Test #40: conversation_validation_test .....   Passed    0.03 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.59 sec
+
+===== cpu-only-tests.log =====
+Internal ctest changing into directory: $VALIDATION/build-cpu-only
+Test project $VALIDATION/build-cpu-only
+    Start 1: conversation_cache_test
+1/7 Test #1: conversation_cache_test ...........   Passed    0.10 sec
+    Start 2: conversation_split_failure_test
+2/7 Test #2: conversation_split_failure_test ...   Passed    0.00 sec
+    Start 3: conversation_memory_test
+3/7 Test #3: conversation_memory_test ..........   Passed    0.00 sec
+    Start 4: conversation_file_test
+4/7 Test #4: conversation_file_test ............   Passed    1.50 sec
+    Start 5: state_codec_test
+5/7 Test #5: state_codec_test ..................   Passed    0.00 sec
+    Start 6: session_save_reclaim_test
+6/7 Test #6: session_save_reclaim_test .........   Passed    0.00 sec
+    Start 7: conversation_report_test
+7/7 Test #7: conversation_report_test ..........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   1.62 sec
+
+===== rebased-v100-tests.log =====
+Internal ctest changing into directory: $VALIDATION/build-rebased
+Test project $VALIDATION/build-rebased
+      Start  1: conversation_cache_test
+ 1/11 Test  #1: conversation_cache_test ...........   Passed    0.10 sec
+      Start  2: conversation_split_failure_test
+ 2/11 Test  #2: conversation_split_failure_test ...   Passed    0.00 sec
+      Start  3: conversation_memory_test
+ 3/11 Test  #3: conversation_memory_test ..........   Passed    0.00 sec
+      Start  4: conversation_file_test
+ 4/11 Test  #4: conversation_file_test ............   Passed    1.56 sec
+      Start  5: state_codec_test
+ 5/11 Test  #5: state_codec_test ..................   Passed    0.00 sec
+      Start  6: session_save_reclaim_test
+ 6/11 Test  #6: session_save_reclaim_test .........   Passed    0.00 sec
+      Start  7: conversation_report_test
+ 7/11 Test  #7: conversation_report_test ..........   Passed    0.00 sec
+      Start 41: conversation_snapshot_test
+ 8/11 Test #41: conversation_snapshot_test ........   Passed    2.49 sec
+      Start 42: conversation_validation_test
+ 9/11 Test #42: conversation_validation_test ......   Passed    0.03 sec
+      Start 43: conversation_capture_codec_test
+10/11 Test #43: conversation_capture_codec_test ...   Passed    0.01 sec
+      Start 44: conversation_transfer_test
+11/11 Test #44: conversation_transfer_test ........   Passed    0.09 sec
+
+100% tests passed, 0 tests failed out of 11
+
+Total Test time (real) =   4.29 sec
+
+===== upstream-configure.log =====
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The CUDA compiler identification is NVIDIA 12.8.93
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /usr/local/cuda-12.8/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: /usr/local/cuda-12.8/targets/x86_64-linux/include (found version "12.8.93")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Strata: CUDA enabled, arch 70
+-- strata: pack/full/experts.bin absent - the expert arena load test is NOT registered
+-- Performing Test STRATA_HAVE_AVXVNNI_INTRINSICS
+-- Performing Test STRATA_HAVE_AVXVNNI_INTRINSICS - Success
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: x86_64
+-- GGML_SYSTEM_ARCH: x86
+-- Including CPU backend
+-- x86 detected
+-- Adding CPU backend variant ggml-cpu: -march=native
+-- ggml version: 0.24.0
+-- ggml commit:  3cf03257f
+-- trellis MMQ (Gyro prompts): overlay on the pinned ggml-cuda in $VALIDATION/build-upstream/ggml-tq-overlay
+-- Configuring done (32.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: $VALIDATION/build-upstream
+
+===== rebased-configure.log =====
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The CUDA compiler identification is NVIDIA 12.8.93
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /usr/local/cuda-12.8/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: /usr/local/cuda-12.8/targets/x86_64-linux/include (found version "12.8.93")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Strata: CUDA enabled, arch 70
+-- strata: pack/full/experts.bin absent - the expert arena load test is NOT registered
+-- Performing Test STRATA_HAVE_AVXVNNI_INTRINSICS
+-- Performing Test STRATA_HAVE_AVXVNNI_INTRINSICS - Success
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: x86_64
+-- GGML_SYSTEM_ARCH: x86
+-- Including CPU backend
+-- x86 detected
+-- Adding CPU backend variant ggml-cpu: -march=native
+-- ggml version: 0.24.0
+-- ggml commit:  3cf03257f
+-- trellis MMQ (Gyro prompts): overlay on the pinned ggml-cuda in $VALIDATION/build-rebased/ggml-tq-overlay
+-- Configuring done (33.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: $VALIDATION/build-rebased
+
+===== Superseded, before integration-fixture correction =====
+Internal ctest changing into directory: $VALIDATION/build-rebased
+Test project $VALIDATION/build-rebased
+      Start  1: conversation_cache_test
+ 1/11 Test  #1: conversation_cache_test ...........   Passed    0.11 sec
+      Start  2: conversation_split_failure_test
+ 2/11 Test  #2: conversation_split_failure_test ...   Passed    0.00 sec
+      Start  3: conversation_memory_test
+ 3/11 Test  #3: conversation_memory_test ..........   Passed    0.00 sec
+      Start  4: conversation_file_test
+ 4/11 Test  #4: conversation_file_test ............   Passed    1.43 sec
+      Start  5: state_codec_test
+ 5/11 Test  #5: state_codec_test ..................   Passed    0.00 sec
+      Start  6: session_save_reclaim_test
+ 6/11 Test  #6: session_save_reclaim_test .........   Passed    0.00 sec
+      Start  7: conversation_report_test
+ 7/11 Test  #7: conversation_report_test ..........   Passed    0.00 sec
+      Start 41: conversation_snapshot_test
+ 8/11 Test #41: conversation_snapshot_test ........***Failed    0.20 sec
+FAIL: everything that is not running state came back exactly: the K/V pages and their scales
+
+      Start 42: conversation_validation_test
+ 9/11 Test #42: conversation_validation_test ......   Passed    0.03 sec
+      Start 43: conversation_capture_codec_test
+10/11 Test #43: conversation_capture_codec_test ...   Passed    0.02 sec
+      Start 44: conversation_transfer_test
+11/11 Test #44: conversation_transfer_test ........   Passed    0.06 sec
+
+91% tests passed, 1 tests failed out of 11
+
+Total Test time (real) =   1.86 sec
+
+The following tests FAILED:
+	 41 - conversation_snapshot_test (Failed)
+Errors while running CTest
